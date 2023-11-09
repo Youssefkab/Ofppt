@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <script src="react.development.js" crossorigin></script>
+    <script src="react-dom.development.min.js" crossorigin></script>
+    <script src="babel.min.js" ></script>
+    
+
+</head>
+
+<body>
+    <div id="app"></div>
+</body>
+<script type="text/babel">
+    var Titre="Bonjour tout le monde ceci est un test pour git et github"
+    var elems=["Pas de modification"];
+    var Listeordo=function({elems,color}){
+        return( 
+            <React.Fragment>
+            <h1 style={{color:color}}>{Titre}</h1>
+            <ul>
+                {
+                elems.map(function(elem,index){
+                    return <li key={index} style={{color:color}}> {elem} </li>     
+                })
+            }
+            </ul>
+            </React.Fragment>
+            )
+        
+
+    }
+
+    ReactDOM.render(<Listeordo elems={elems} color="Blue"/>, document.getElementById("app"));
+</script>
+
+</html>
